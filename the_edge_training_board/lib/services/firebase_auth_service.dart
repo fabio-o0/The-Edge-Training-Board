@@ -23,9 +23,12 @@ class FirebaseAuthService {
   }
 
   Future<User> createAccountWithEmailAndPassword(
-      String email, String password, String first, String last) async {
+      String email, String password, String name) async {
     final authResult = await _firebaseAuth.createUserWithEmailAndPassword(
         email: email, password: password);
+    if (authResult.user != null) {
+      await authResult.user.updateProfile(displayName: name);
+    }
     return authResult.user;
   }
 
