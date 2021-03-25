@@ -23,5 +23,11 @@ class Style {
         button: TextStyle(fontSize: 21.32, fontWeight: FontWeight.w700, color: Colors.black),
         overline: TextStyle(fontSize: 16.00, fontWeight: FontWeight.w900, color: Color(0xffd6ae4e)),
       ),
+
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: Color(0xffd6ae4e),
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey[700],
+      )
   );
 }

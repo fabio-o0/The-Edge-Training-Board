@@ -9,15 +9,18 @@ class Fluro {
   //       final args = context.settings.arguments as Product;
   //       return ProductPage(id: params['id'][0], product: args);
   //     });
-  static Handler _homehandler = Handler(
+  static Handler _homeHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           Decider());
-  // static fluro.Handler _productshandler = fluro.Handler(
-  //     handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
-  //         ProductsPage());
-  // static fluro.Handler _ordershandler = fluro.Handler(
-  //     handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
-  //         OrdersPage());
+  static Handler _settingsHandler = Handler(
+      handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+          SettingsPage());
+  static Handler _addRouteHandler = Handler(
+      handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+          AddRoutePage());
+  static Handler _myRoutesHandler = Handler(
+      handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+          MyRoutesPage());
   // static fluro.Handler _orderhandler = fluro.Handler(
   //     handlerFunc: (BuildContext context, Map<String, dynamic> params) {
   //       final args = context.settings.arguments as Order;
@@ -32,12 +35,20 @@ class Fluro {
   static void setupRouter() {
     router.define(
       '/',
-      handler: _homehandler,
+      handler: _homeHandler,
     );
-    // router.define(
-    //   '/products',
-    //   handler: _productshandler,
-    // );
+    router.define(
+      '/settings',
+      handler: _settingsHandler,
+    );
+    router.define(
+      '/add_route',
+      handler: _homeHandler,
+    );
+    router.define(
+      '/my_routes',
+      handler: _settingsHandler,
+    );
     // router.define(
     //   '/products/:id',
     //   handler: _productHandler,

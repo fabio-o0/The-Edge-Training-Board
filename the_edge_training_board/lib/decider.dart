@@ -12,7 +12,7 @@ class Decider extends StatelessWidget {
         if (user == null) {
           return LoginPage();
         } else {
-          return HomePage(user: user);
+          return HomePage();
         }
       },
     );
