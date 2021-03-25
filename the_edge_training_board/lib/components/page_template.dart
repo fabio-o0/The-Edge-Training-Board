@@ -7,6 +7,10 @@ import 'package:the_edge_training_board/router/router.dart';
 import 'package:the_edge_training_board/services/firebase_auth_service.dart';
 
 class PageTemplate extends StatefulWidget {
+  final Widget content;
+
+  const PageTemplate({@required this.content});
+
   @override
   _PageTemplateState createState() => _PageTemplateState();
 }
@@ -29,7 +33,7 @@ class _PageTemplateState extends State<PageTemplate> {
     else if (url == '/my_routes') _selectedIndex = 2;
     else if (url == '/settings') _selectedIndex = 3;
     return Scaffold(
-      body: Container(child: Center(child: Text(_user.uid + ' ' + _selectedIndex.toString()),),),
+      body: widget.content,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 0,

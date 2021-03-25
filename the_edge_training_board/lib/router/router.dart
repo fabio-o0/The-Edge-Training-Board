@@ -11,7 +11,7 @@ class Fluro {
   //     });
   static Handler _homeHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
-          Decider());
+          HomePage());
   static Handler _settingsHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
           SettingsPage());
@@ -43,11 +43,11 @@ class Fluro {
     );
     router.define(
       '/add_route',
-      handler: _homeHandler,
+      handler: _addRouteHandler,
     );
     router.define(
       '/my_routes',
-      handler: _settingsHandler,
+      handler: _myRoutesHandler,
     );
     // router.define(
     //   '/products/:id',

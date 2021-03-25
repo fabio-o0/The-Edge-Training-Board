@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:the_edge_training_board/components/general/buttons.dart';
 import 'package:the_edge_training_board/components/general/input_field.dart';
-import 'package:the_edge_training_board/decider.dart';
 import 'package:the_edge_training_board/login_page.dart';
 import 'package:the_edge_training_board/router/route_names.dart';
 import 'package:the_edge_training_board/router/router.dart';
