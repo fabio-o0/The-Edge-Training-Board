@@ -32,6 +32,10 @@ class FirebaseAuthService {
     return authResult.user;
   }
 
+  Future<void> changeUserImage(Image image) async {
+    
+  }
+
   Future<void> signOut() async {
     return _firebaseAuth.signOut();
   }
